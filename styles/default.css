@@ -1,0 +1,220 @@
+/* =========================
+   default.css – Portfolio Styles
+   Goal: clean, readable, professional,
+   with a little personality baked in
+   ========================= */
+
+/* Basic reset so spacing and sizing behave consistently */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Remove default browser margin */
+body {
+  margin: 0;
+}
+
+/* -------------------------
+   Design variables
+   Centralized colors, spacing, and sizing
+   so updates are easy later
+   ------------------------- */
+:root {
+  /* Neutral base with warm accents for personality */
+  --bg: #c6bca9;          /* soft off-white background */
+  --surface: #ffffff;     /* section/card background */
+  --text: #1f2937;        /* primary text color */
+  --muted: #6b7280;       /* secondary / muted text */
+  --border: #e5e7eb;      /* subtle borders */
+
+  --accent: #8b5e34;      /* warm brown accent */
+  --accent-2: #1f4d5a;    /* deep teal for contrast */
+
+  --link: #1f4d5a;
+  --link-hover: #163943;
+
+  --shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+
+  --radius: 14px;
+  --maxw: 980px;
+
+  /* Spacing scale for consistent layout */
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 36px;
+  --space-6: 52px;
+
+  /* System font stack for clean, native feel */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* -------------------------
+   Base typography + background
+   ------------------------- */
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+
+  /* Subtle background gradients to keep things from feeling flat */
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(139, 94, 52, 0.08), transparent 55%),
+    radial-gradient(1000px 500px at 90% 0%, rgba(31, 77, 90, 0.06), transparent 55%),
+    var(--bg);
+
+  line-height: 1.6;
+}
+
+/* Keep paragraphs readable and not overly wide */
+p {
+  margin: 0 0 var(--space-3);
+  max-width: 70ch;
+}
+
+/* Headings: slightly tighter spacing and subtle emphasis */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2);
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-top: var(--space-6);
+}
+
+h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  margin-top: var(--space-5);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: var(--space-4);
+}
+
+/* Muted text for emphasis without overpowering */
+em,
+small {
+  color: var(--muted);
+}
+
+/* -------------------------
+   Layout handling
+   Centers content without
+   needing extra wrappers
+   ------------------------- */
+body > * {
+  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make sure standalone images behave nicely */
+body > img {
+  display: block;
+}
+
+/* -------------------------
+   Section dividers
+   ------------------------- */
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border),
+    transparent
+  );
+  margin: var(--space-5) auto;
+  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
+}
+
+/* -------------------------
+   Images
+   Rounded corners for a
+   polished, consistent look
+   ------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Headshot styling */
+img[alt*="Photo"] {
+  margin: 2rem auto;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+/* -------------------------
+   Links
+   Clean, accessible, and subtle
+   ------------------------- */
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 77, 90, 0.35);
+  padding-bottom: 1px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  border-bottom-color: rgba(31, 77, 90, 0.75);
+}
+
+/* Visible focus state for accessibility */
+a:focus-visible {
+  outline: 3px solid rgba(139, 94, 52, 0.35);
+  outline-offset: 3px;
+  border-bottom-color: transparent;
+}
+
+/* -------------------------
+   Lists
+   Simple spacing for readability
+   ------------------------- */
+ul,
+ol {
+  padding-left: 1.2rem;
+  margin: 0 0 var(--space-4);
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+/* Add breathing room at the bottom of the page */
+body > *:last-child {
+  margin-bottom: var(--space-6);
+}
+
+/* Slight text bump on large screens */
+@media (min-width: 1100px) {
+  p {
+    font-size: 1.02rem;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

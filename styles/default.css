@@ -1,7 +1,5 @@
 /* =========================
    default.css – Portfolio Styles
-   Goal: clean, readable, professional,
-   with a little personality baked in
    ========================= */
 
 /* Basic reset so spacing and sizing behave consistently */
@@ -92,6 +90,7 @@ h4 {
 h1 {
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-top: var(--space-6);
+  text-align: center; /* Center my name */
 }
 
 h2 {
@@ -121,11 +120,6 @@ body > * {
   margin-right: auto;
 }
 
-/* Make sure standalone images behave nicely */
-body > img {
-  display: block;
-}
-
 /* -------------------------
    Section dividers
    ------------------------- */
@@ -148,16 +142,25 @@ hr {
    polished, consistent look
    ------------------------- */
 img {
+  display: block;        /* Allows margin auto to center images */
   max-width: 100%;
   height: auto;
+  margin: 2rem auto;     /* Centers ALL images */
   border-radius: var(--radius);
 }
 
-/* Headshot styling */
+/* Headshot styling (keeps it looking a little more “featured”) */
 img[alt*="Photo"] {
-  margin: 2rem auto;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
+}
+
+/* Caption styling */
+figcaption {
+  font-style: italic;     /* Make captions italic */
+  color: var(--muted);    /* Keep captions subtle */
+  text-align: center;     /* Align with centered images */
+  margin-top: 0.5rem;
 }
 
 /* -------------------------

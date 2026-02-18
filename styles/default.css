@@ -80,7 +80,9 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: clamp(2rem, 3vw, 2.6rem);
-  margin-top: var(--space-6);
+  margin-top: var(--space-5);
+  text-align: center;          /* centers the text */
+  width: 100%;                 /* makes it span full container */
 }
 
 h2 {
@@ -93,7 +95,7 @@ h3 {
   margin-top: var(--space-4);
 }
 
-/* Default paragraph (LEFT aligned for portfolio pages) */
+/* Default paragraph LEFT aligned */
 p {
   margin: 0 0 var(--space-3);
   max-width: 70ch;
@@ -110,6 +112,13 @@ small {
    PAGE-SPECIFIC ALIGNMENT
 ------------------------- */
 
+
+
+/* Default: keep pages left-aligned */
+main {
+  text-align: left;
+}
+
 /* ---------- HOMEPAGE ---------- */
 .homepage main {
   text-align: center;
@@ -119,16 +128,6 @@ small {
   margin-left: auto;
   margin-right: auto;
   max-width: 60ch;
-}
-
-/* ---------- PORTFOLIO PAGE ---------- */
-.portfolio main {
-  text-align: left;
-}
-
-/* Center ONLY the portfolio title */
-.portfolio h1 {
-  text-align: center;
 }
 
 /* -------------------------

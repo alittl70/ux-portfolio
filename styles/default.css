@@ -2,7 +2,7 @@
    default.css – Portfolio Styles
    ========================= */
 
-/* Basic reset so spacing and sizing behave consistently */
+/* Basic reset */
 *,
 *::before,
 *::after {
@@ -13,26 +13,22 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Remove default browser margin */
 body {
   margin: 0;
 }
 
 /* -------------------------
    Design variables
-   Centralized colors, spacing, and sizing
-   so updates are easy later
-   ------------------------- */
+------------------------- */
 :root {
-  /* Neutral base with warm accents for personality */
-  --bg: #c6bca9;          /* soft off-white background */
-  --surface: #ffffff;     /* section/card background */
-  --text: #1f2937;        /* primary text color */
-  --muted: #6b7280;       /* secondary / muted text */
-  --border: #e5e7eb;      /* subtle borders */
+  --bg: #c6bca9;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 
-  --accent: #8b5e34;      /* warm brown accent */
-  --accent-2: #1f4d5a;    /* deep teal for contrast */
+  --accent: #8b5e34;
+  --accent-2: #1f4d5a;
 
   --link: #1f4d5a;
   --link-hover: #163943;
@@ -42,7 +38,6 @@ body {
   --radius: 14px;
   --maxw: 980px;
 
-  /* Spacing scale for consistent layout */
   --space-1: 6px;
   --space-2: 10px;
   --space-3: 16px;
@@ -50,38 +45,34 @@ body {
   --space-5: 36px;
   --space-6: 52px;
 
-  /* System font stack for clean, native feel */
-  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 /* -------------------------
-   Base typography + background
-   ------------------------- */
+   Base styles
+------------------------- */
 body {
   font-family: var(--font-sans);
   color: var(--text);
-
-  /* Subtle background gradients to keep things from feeling flat */
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(139, 94, 52, 0.08), transparent 55%),
     radial-gradient(1000px 500px at 90% 0%, rgba(31, 77, 90, 0.06), transparent 55%),
     var(--bg);
-
   line-height: 1.6;
 }
 
-/* Keep paragraphs readable and not overly wide */
-p {
-  margin: 0 0 var(--space-3);
-  max-width: 70ch;
+/* Center page layout block */
+body > * {
+  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Headings: slightly tighter spacing and subtle emphasis */
-h1,
-h2,
-h3,
-h4 {
+/* -------------------------
+   Typography
+------------------------- */
+
+h1, h2, h3, h4 {
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin: 0 0 var(--space-2);
@@ -90,7 +81,6 @@ h4 {
 h1 {
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-top: var(--space-6);
-  text-align: center; /* Center my name */
 }
 
 h2 {
@@ -103,70 +93,71 @@ h3 {
   margin-top: var(--space-4);
 }
 
-/* Muted text for emphasis without overpowering */
+/* Default paragraph (LEFT aligned for portfolio pages) */
+p {
+  margin: 0 0 var(--space-3);
+  max-width: 70ch;
+  text-align: left;
+}
+
+/* Muted text */
 em,
 small {
   color: var(--muted);
 }
 
 /* -------------------------
-   Layout handling
-   Centers content without
-   needing extra wrappers
-   ------------------------- */
-body > * {
-  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
-  margin-left: auto;
-  margin-right: auto;
+   PAGE-SPECIFIC ALIGNMENT
+------------------------- */
+
+/* ---------- HOMEPAGE ---------- */
+.homepage main {
+  text-align: center;
 }
 
-/* -------------------------
-   Section dividers
-   ------------------------- */
-hr {
-  border: none;
-  height: 3px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--border),
-    transparent
-  );
-  margin: var(--space-5) auto;
-  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
+.homepage p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
+}
+
+/* ---------- PORTFOLIO PAGE ---------- */
+.portfolio main {
+  text-align: left;
+}
+
+/* Center ONLY the portfolio title */
+.portfolio h1 {
+  text-align: center;
 }
 
 /* -------------------------
    Images
-   Rounded corners for a
-   polished, consistent look
-   ------------------------- */
+------------------------- */
 img {
-  display: block;        /* Allows margin auto to center images */
+  display: block;
   max-width: 100%;
   height: auto;
-  margin: 2rem auto;     /* Centers ALL images */
+  margin: 2rem auto;
   border-radius: var(--radius);
 }
 
-/* Headshot styling (keeps it looking a little more “featured”) */
 img[alt*="Photo"] {
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
 }
 
-/* Caption styling */
+/* Caption */
 figcaption {
-  font-style: italic;     /* Make captions italic */
-  color: var(--muted);    /* Keep captions subtle */
-  text-align: center;     /* Align with centered images */
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
   margin-top: 0.5rem;
 }
 
 /* -------------------------
    Links
-   Clean, accessible, and subtle
-   ------------------------- */
+------------------------- */
 a {
   color: var(--link);
   text-decoration: none;
@@ -181,7 +172,6 @@ a:focus-visible {
   border-bottom-color: rgba(31, 77, 90, 0.75);
 }
 
-/* Visible focus state for accessibility */
 a:focus-visible {
   outline: 3px solid rgba(139, 94, 52, 0.35);
   outline-offset: 3px;
@@ -190,10 +180,8 @@ a:focus-visible {
 
 /* -------------------------
    Lists
-   Simple spacing for readability
-   ------------------------- */
-ul,
-ol {
+------------------------- */
+ul, ol {
   padding-left: 1.2rem;
   margin: 0 0 var(--space-4);
 }
@@ -202,19 +190,30 @@ li {
   margin: 0.3rem 0;
 }
 
-/* Add breathing room at the bottom of the page */
+/* -------------------------
+   Divider
+------------------------- */
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  margin: var(--space-5) auto;
+}
+
+/* Footer spacing */
 body > *:last-child {
   margin-bottom: var(--space-6);
 }
 
-/* Slight text bump on large screens */
+/* -------------------------
+   Responsive
+------------------------- */
 @media (min-width: 1100px) {
   p {
     font-size: 1.02rem;
   }
 }
 
-/* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;

@@ -1,9 +1,8 @@
 # UX/UI Portfolio
-
 This repository contains my personal UX/UI design portfolio. It showcases selected projects, case studies, and experiments as I continue developing my skills as a UX/UI designer in training.
 
 ## About Me
-I am a UX/UI designer in training with an interest in creating intuitive, accessible, and human-centered digital experiences. My work focuses on understanding user needs, exploring design solutions, and iterating through research and feedback.
+My name is Alanah Little and I am a UX/UI designer in training with an interest in creating intuitive, accessible, and human-centered digital experiences. My work focuses on understanding user needs, exploring design solutions, and iterating through research and feedback.
 
 ## What You'll Find Here
 - UX/UI case studies

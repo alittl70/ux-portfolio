@@ -1,31 +1,35 @@
-# UX/UI Portfolio
-This repository contains my personal UX/UI design portfolio. It showcases selected projects, case studies, and experiments as I continue developing my skills as a UX/UI designer in training.
+🎨 Alanah Little – Portfolio
 
-## About Me
-My name is Alanah Little and I am a UX/UI designer in training with an interest in creating intuitive, accessible, and human-centered digital experiences. My work focuses on understanding user needs, exploring design solutions, and iterating through research and feedback.
+UX/UI and Front-End portfolio showcasing my ability to design and build intuitive, user-centered digital experiences. I combine user research, wireframing, and front-end development to create accessible and responsive web applications.
 
-## What You'll Find Here
-- UX/UI case studies
-- Wireframes and prototypes
-- Design process documentation
-- Front-end fundamentals (HTML & CSS)
-- Personal and academic projects
+🔗 Live Portfolio: https://alittl70.github.io/ux-portfolio/
 
-## Tools & Skills
-- Figma
-- Adobe Illustrator & Photoshop
-- HTML & CSS
-- User Research
-- Wireframing & Prototyping
-- Accessibility Basics
+👩🏽‍💻 About Me
 
-## Live Portfolio
-You can view the live version of my portfolio here:  
-👉 **https://alittl70.github.io/ux-portfolio/**
+I’m a Computer Science student at UNC Charlotte specializing in Human-Computer Interaction, with a focus on designing and developing intuitive, accessible, and user-centered digital experiences.
 
-## Status
-This portfolio is a work in progress and will continue to evolve as I learn, build, and refine my skills.
+My work emphasizes usability, accessibility, and clean design, with a focus on translating user needs into functional and engaging interfaces.
 
----
+📁 Portfolio Highlights
+UX/UI case studies
+Wireframes and interactive prototypes
+Design process documentation
+Front-end implementations (HTML & CSS)
+Academic and personal projects
+🛠 Technical Skills
+Design Tools: Figma, Adobe Illustrator, Photoshop
+Front-End: HTML, CSS
+UX Skills: User Research, Wireframing, Prototyping
+Other: Accessibility Fundamentals
+🚀 Core Strengths
+User-centered design and usability
+Clear information architecture and navigation
+Translating research into design solutions
+Bridging UX design and front-end development
+📈 Status
 
-Thank you for taking the time to view my work!
+🚧 Ongoing Portfolio — Continuously evolving as I refine my skills in UX design, front-end development, and accessibility.
+
+🔗 Connect With Me
+LinkedIn: https://www.linkedin.com/in/alanah-little
+GitHub: https://github.com/alittl70

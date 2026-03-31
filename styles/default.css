@@ -1,8 +1,8 @@
 /* =========================
-   default.css – Portfolio Styles (ORIGINAL)
+   default.css – FINAL Portfolio Styles
    ========================= */
 
-/* Basic reset */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -15,100 +15,81 @@ html {
 
 body {
   margin: 0;
-}
-
-/* -------------------------
-   Design variables
-------------------------- */
-:root {
-  --bg: #c6bca9;
-  --surface: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-
-  --accent: #8b5e34;
-  --accent-2: #1f4d5a;
-
-  --link: #1f4d5a;
-  --link-hover: #163943;
-
-  --shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-
-  --radius: 14px;
-  --maxw: 980px;
-
-  --space-1: 6px;
-  --space-2: 10px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 36px;
-  --space-6: 52px;
-
-  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-}
-
-/* -------------------------
-   Base styles
-------------------------- */
-body {
-  font-family: var(--font-sans);
-  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: #1f2937;
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(139, 94, 52, 0.08), transparent 55%),
     radial-gradient(1000px 500px at 90% 0%, rgba(31, 77, 90, 0.06), transparent 55%),
-    var(--bg);
+    #c6bca9;
   line-height: 1.6;
 }
 
-/* Center page layout */
-body > * {
-  width: min(var(--maxw), calc(100% - 2 * var(--space-4)));
-  margin-left: auto;
-  margin-right: auto;
+/* -------------------------
+   Layout
+------------------------- */
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* -------------------------
+   Header
+------------------------- */
+.portfolio-header {
+  width: 100%;
+  background-color: #f5efe6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: black;
 }
 
 /* -------------------------
    Typography
 ------------------------- */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin: 0 0 var(--space-2);
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  margin-top: var(--space-5);
+  font-size: 2.5rem;
   text-align: center;
+  margin-top: 40px;
 }
 
 h2 {
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-  margin-top: var(--space-5);
-}
-
-h3 {
-  font-size: 1.15rem;
-  margin-top: var(--space-4);
+  font-size: 1.8rem;
+  margin-top: 50px;
 }
 
 p {
-  margin: 0 0 var(--space-3);
-  max-width: 70ch;
-  text-align: left;
-}
-
-/* -------------------------
-   Lists
-------------------------- */
-ul, ol {
-  padding-left: 1.2rem;
-  margin: 0 0 var(--space-4);
-}
-
-li {
-  margin: 0.3rem 0;
+  margin-bottom: 20px;
+  max-width: 65ch;
 }
 
 /* -------------------------
@@ -118,42 +99,48 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 2rem auto; /* centered like original */
-  border-radius: var(--radius);
-}
-
-figcaption {
-  font-style: italic;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 0.5rem;
+  margin: 40px auto;
+  border-radius: 14px;
 }
 
 /* -------------------------
    Links
 ------------------------- */
 a {
-  color: var(--link);
+  color: #1f4d5a;
   text-decoration: none;
-  border-bottom: 1px solid rgba(31, 77, 90, 0.35);
-  padding-bottom: 1px;
 }
 
 a:hover {
-  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* -------------------------
-   Divider
+   Sections (clean card feel)
 ------------------------- */
-hr {
-  border: none;
-  height: 3px;
-  background: linear-gradient(to right, transparent, var(--border), transparent);
-  margin: var(--space-5) auto;
+section {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 24px;
+  border-radius: 14px;
+  margin-top: 30px;
 }
 
-/* Footer spacing */
-body > *:last-child {
-  margin-bottom: var(--space-6);
+/* -------------------------
+   Footer
+------------------------- */
+.portfolio-footer {
+  width: 100%;
+  background-color: #f5efe6;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 60px;
+}
+
+.footer-links a {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: black;
 }

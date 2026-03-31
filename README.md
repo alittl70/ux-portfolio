@@ -1,39 +1,35 @@
-🎨 Alanah Little - Portfolio
+🎨 Alanah Little – Portfolio
 
-This repository contains my UX/UI design portfolio, showcasing selected projects, case studies, and ongoing work focused on creating intuitive, user-centered digital experiences.
+UX/UI and Front-End portfolio showcasing my ability to design and build intuitive, user-centered digital experiences. I combine user research, wireframing, and front-end development to create accessible and responsive web applications.
 
 🔗 Live Portfolio: https://alittl70.github.io/ux-portfolio/
 
 👩🏽‍💻 About Me
-Hi, I’m Alanah Little, a Computer Science student at UNC Charlotte with a concentration in Human-Computer Interaction. I’m interested in designing and building intuitive, accessible, and user-centered digital experiences by combining UX/UI design and front-end development.
 
-My work focuses on understanding user needs, exploring design solutions, and iterating through research, prototyping, and feedback.
+I’m a Computer Science student at UNC Charlotte specializing in Human-Computer Interaction, with a focus on designing and developing intuitive, accessible, and user-centered digital experiences.
 
-📂 What You’ll Find
+My work emphasizes usability, accessibility, and clean design, with a focus on translating user needs into functional and engaging interfaces.
+
+📁 Portfolio Highlights
 UX/UI case studies
 Wireframes and interactive prototypes
 Design process documentation
 Front-end implementations (HTML & CSS)
 Academic and personal projects
-
-🛠 Tools & Skills
-Figma
-Adobe Illustrator & Photoshop
-HTML & CSS
-User Research
-Wireframing & Prototyping
-Accessibility Fundamentals
-
-🚀 Project Focus
+🛠 Technical Skills
+Design Tools: Figma, Adobe Illustrator, Photoshop
+Front-End: HTML, CSS
+UX Skills: User Research, Wireframing, Prototyping
+Other: Accessibility Fundamentals
+🚀 Core Strengths
 User-centered design and usability
 Clear information architecture and navigation
 Translating research into design solutions
-Bridging design and front-end development
-
+Bridging UX design and front-end development
 📈 Status
-🚧 Ongoing Portfolio — Continuously Evolving
-This portfolio is actively updated as I continue to refine my skills in UX design, front-end development, and accessibility.
 
-📬 Connect With Me
+🚧 Ongoing Portfolio — Continuously evolving as I refine my skills in UX design, front-end development, and accessibility.
+
+🔗 Connect With Me
 LinkedIn: https://www.linkedin.com/in/alanah-little
 GitHub: https://github.com/alittl70

@@ -11,12 +11,12 @@
 <body>
 
   <!-- Header -->
-  <div id="header"></div>
-
+  <div id="portfolio-header"></div>
+ 
   <main>
 
     <h1>Portfolio</h1>
-
+  <hr>
     <!-- Project 1 -->
     <section class="project">
       <h2>Smart Kitchen UX Prototype</h2>
@@ -47,7 +47,7 @@
       <p><strong>Impact:</strong>Improved usability by streamlining workflows and centralizing wellness features, enabling more efficient meal planning and goal tracking.</p>
     </section>
 
-    <!-- Project 4 -->
+    <!-- Project 2 -->
     <section class="project">
       <h2>Roller Skate E-Commerce UX Evaluation</h2>
 
@@ -77,7 +77,7 @@
       <p><strong>Impact:</strong>Identified key usability gaps and delivered recommendations that improve navigation clarity and increase user confidence in purchasing decisions.</p>
     </section>
 
-    <!--Project 2-->
+    <!--Project 3-->
     <section class="project">
       <h2>SustAIn: Immersion Cooling System Prototype</h2>
 
@@ -91,7 +91,7 @@
         <figcaption>Functional immersion cooling prototype</figcaption>
       </figure>
 
-      <p><strong>Overview:</strong>Developed a sustainable cooling solution for modern computing systems, focusing on reducing the environmental impact of energy-intensive data infrastructure.</p>
+      <p><strong>Overview:</strong> Developed a sustainable cooling solution for modern computing systems, focusing on reducing the environmental impact of energy-intensive data infrastructure.</p>
 
       <p><strong>Problem:</strong> High-performance computing systems generate significant heat, requiring energy-intensive cooling methods.</p>
 
@@ -103,12 +103,12 @@
         <li>Presented the solution in a Shark Tank–style pitch, communicating technical concepts and value proposition effectively.</li>
       </ul>
 
-      <p><strong>Solution:</strong>Designed and prototyped a full immersion cooling system using non-conductive mineral oil to efficiently dissipate heat without traditional cooling infrastructure.</p>
+      <p><strong>Solution:</strong> Designed and prototyped a full immersion cooling system using non-conductive mineral oil to efficiently dissipate heat without traditional cooling infrastructure.</p>
 
       <p><strong>Impact:</strong> Demonstrated a scalable, energy-efficient cooling solution, showcasing how alternative methods can reduce environmental impact and improve system efficiency in high-performance computing environments.</p>
     </section>
 
-    <!-- Project 3 -->
+    <!-- Project 4 -->
     <section class="project">
       <h2>Personal Course Website</h2>
 
@@ -119,11 +119,12 @@
 
       <figure>
         <img src="/images/project3.jpg" alt="Personal website homepage">
+        <figcaption><a href= "https://alittl70.github.io/">View my personal course website.</a> </figcaption>
       </figure>
 
-      <p><strong>Overview:</strong>Developed a multi-page website as part of coursework to demonstrate foundational web development skills, including HTML structure, CSS styling, and responsive design.</p>
+      <p><strong>Overview:</strong> Developed a multi-page website as part of coursework to demonstrate foundational web development skills, including HTML structure, CSS styling, and responsive design.</p>
 
-      <p><strong>Problem:</strong>Needed to build a structured, multi-page website that effectively organizes content while demonstrating proficiency in web development concepts and usability.</p>
+      <p><strong>Problem:</strong> Needed to build a structured, multi-page website that effectively organizes content while demonstrating proficiency in web development concepts and usability.</p>
 
       <p><strong>Approach:</strong></p>
       <ul>
@@ -133,9 +134,9 @@
         <li>Organized content into clear sections to improve readability and structure.</li>
       </ul>
 
-      <p><strong>Solution:</strong>Created a fully functional multi-page website featuring various components such as forms, navigation systems, and content pages to demonstrate front-end development skills.</p>
+      <p><strong>Solution:</strong> Created a fully functional multi-page website featuring various components such as forms, navigation systems, and content pages to demonstrate front-end development skills.</p>
 
-      <p><strong>Impact:</strong>Strengthened foundational web development skills and created a structured, user-friendly site that demonstrates the ability to build and organize multi-page applications.</p>
+      <p><strong>Impact:</strong> Strengthened foundational web development skills and created a structured, user-friendly site that demonstrates the ability to build and organize multi-page applications.</p>
     </section>
 
     <!-- Project 5 -->
@@ -149,11 +150,12 @@
 
       <figure>
         <img src="/images/project5.jpg" alt="RideReady mobile prototype">
+        <figcaption> <a href= "https://www.figma.com/proto/PYFDiU4Sncgwmn21E5Dq8q/RideReady?node-id=1-3&p=f&t=wXiu9pzpUXXOEKkd-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1">View my interactive prototype.</a> </figcaption>
       </figure>
 
-      <p><strong>Overview:</strong>  Designed a mobile application to help users manage vehicle maintenance and track service schedules more efficiently.</p>
+      <p><strong>Overview:</strong> Designed a mobile application to help users manage vehicle maintenance and track service schedules more efficiently.</p>
 
-      <p><strong>Problem:</strong>Users struggle to keep track of maintenance schedules, leading to missed services and disorganized information management.</p>
+      <p><strong>Problem:</strong> Users struggle to keep track of maintenance schedules, leading to missed services and disorganized information management.</p>
 
       <p><strong>Approach:</strong></p>
       <ul>
@@ -163,27 +165,31 @@
         <li>Iterated on designs to enhance usability and clarity.</li>
       </ul>
 
-      <p><strong>Solution:</strong>Developed a mobile interface that centralizes maintenance tracking, reminders, and vehicle information in a user-friendly system.</p>
+      <p><strong>Solution:</strong> Developed a mobile interface that centralizes maintenance tracking, reminders, and vehicle information in a user-friendly system.</p>
 
-      <p><strong>Impact:</strong>Reduced user friction by creating a more intuitive interface for managing maintenance tasks and reminders.</p>
+      <p><strong>Impact:</strong> Reduced user friction by creating a more intuitive interface for managing maintenance tasks and reminders.</p>
     </section>
 
    
   </main>
-
+  <hr>
   <!-- Footer -->
-  <div id="footer"></div>
+  <div id="portfolio-footer"></div>
 
   <!-- Load header/footer -->
   <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("header").innerHTML = data);
+  fetch("../header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-header").innerHTML = data;
+    });
 
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data);
-  </script>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-footer").innerHTML = data;
+    });
+</script>
 
 </body>
 </html>

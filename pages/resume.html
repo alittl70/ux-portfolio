@@ -1,91 +1,91 @@
-<!-- Must start with this first.-->
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Sets the character encoding so text displays correctly.-->
 <head>
     <meta charset="UTF-8">
-        <!-- Makes the page responsive on mobile devices.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Title shown on the browser tab.-->
-    <title>Alanah Little Portfolio | Resume </title>
-    <link rel="stylesheet" href="styles/default.css">
+    <title>Alanah Little Portfolio | Resume</title>
+    <link rel="stylesheet" href="../styles/default.css">
 </head>
 
-<!-- Everything the user sees on the page goes inside the body.-->
+<body>
 
-<body class="homepage">
-<!-- Header(title) -->
+<!-- Header -->
+<div id="portfolio-header"></div>
+
 <main>
-    <h1> <!-- this is the opening tag-->
-        Resume <!-- This whole thing is the element-->
-    </h1> <!--this is the closing tag-->
+
+    <h1>Resume</h1>
     <hr>
+    <h4><a href="/resume.pdf">View Resume</a></h4>
+    <h2>Education</h3>
+    <p>
+        University of North Carolina at Charlotte<br>
+        B.A. Computer Science (Human–Computer Interaction)<br>
+        Expected Graduation: May 2027
+    </p>
+    <hr>
+    <h2>Skills</h3>
+    <ul>
+        <li><strong>Programming:</strong> JavaScript, Python, C++, HTML, CSS</li>
+        <li><strong>Front-End Development:</strong> Responsive design, UI components, web applications, accessibility (WCAG)</li>
+        <li><strong>UX/UI Design:</strong> Wireframing, prototyping, interaction design, usability testing</li>
+        <li><strong>Software Engineering:</strong> OOP, debugging, testing, Git, Agile development</li>
+        <li><strong>Tools:</strong> Figma, GitHub, VS Code, Adobe Creative Suite</li>
+    </ul>
+    <hr>
+    <h2>Certifications</h2>
 
-    <h3> Computer Science Student | Front-End Developer & UX Designer | Product-Focused Problem Solver</h3>
-<!-- Main Elements of my HomePage-->
+    <div class="certifications">
 
-<h3>Education</h3>
-
-<p>
-University of North Carolina at Charlotte<br>
-B.A. Computer Science (Human–Computer Interaction)<br>
-Expected Graduation: May 2027
-</p>
-
-<h3>Skills</h3>
-
-<ul>
-  <li><strong>Programming:</strong> JavaScript, Python, C++, HTML, CSS</li>
-  <li><strong>Front-End Development:</strong> Responsive design, UI components, web applications, accessibility (WCAG)</li>
-  <li><strong>UX/UI Design:</strong> Wireframing, prototyping, interaction design, usability testing</li>
-  <li><strong>Software Engineering:</strong> OOP, debugging, testing, Git, Agile development</li>
-  <li><strong>Tools:</strong> Figma, GitHub, VS Code, Adobe Creative Suite</li>
-</ul>
-
-<h3>Projects</h3>
-
-<p><strong>Personal Portfolio Website</strong></p>
-<ul>
-  <li>Developed a responsive multi-page web application using HTML, CSS, and JavaScript</li>
-  <li>Implemented reusable UI components and optimized layouts for cross-device compatibility</li>
-</ul>
-
-<p><strong>RideReady Mobile Application</strong></p>
-<ul>
-  <li>Designed user flows and interface components to improve usability and task efficiency</li>
-  <li>Translated functional requirements into structured workflows using iterative testing</li>
-</ul>
-
-<p><strong>Roller Skate E-Commerce UX Evaluation</strong></p>
-<ul>
-  <li>Conducted heuristic evaluations to identify usability issues in navigation and checkout flows</li>
-  <li>Proposed design improvements to enhance task completion and user confidence</li>
-</ul>
-
-<p><strong>Project SustAIn – Immersion Cooling Prototype</strong></p>
-<ul>
-  <li>Researched and developed a prototype exploring energy-efficient cooling solutions for computing systems</li>
-  <li>Analyzed environmental and technical tradeoffs and presented findings in a structured technical format</li>
-</ul>
-
-<p><strong>Smart Kitchen UX Prototype</strong></p>
-<ul>
-  <li>Designed a wellness-focused feature enabling users to manage nutrition goals and personalized meal planning</li>
-  <li>Created wireframes and interaction flows to improve usability and reduce cognitive load</li>
-</ul>
-
-<p><strong>Foundational Personal Website</strong></p>
-<ul>
-  <li>Built an initial website using HTML and CSS to establish core web development skills</li>
-  <li>Applied visual hierarchy and layout principles to improve readability and structure</li>
-</ul>
-
+        <div class="cert-card">
+            <img src="../images/developer.jpg" alt="Responsive Web Design Certification">
+            <div class="cert-content">
+                <h3>Responsive Web Design Certification</h3>
+                <p><strong>freeCodeCamp</strong> — March 2026</p>
+                <p>300+ hours building responsive websites using HTML, CSS, and accessibility best practices.</p>
+            </div>
+        </div>
 <hr>
-<p>
-  <a href="Copy of Alanah.Little.Resume[FE].pdf" target="_blank">
-    Download Full Resume
-  </a>
-</p>
+        <div class="cert-card">
+            <img src="../images/photoshop.jpg" alt="Adobe Photoshop Certification">
+            <div class="cert-content">
+                <h3>Adobe Certified Professional – Visual Design (Photoshop)</h3>
+                <p><strong>Adobe</strong> — March 2022</p>
+                <p>Demonstrated proficiency in creating and optimizing visual assets for digital interfaces.</p>
+            </div>
+        </div>
+<hr>
+        <div class="cert-card">
+            <img src="../images/illustrator.jpg" alt="Adobe Illustrator Certification">
+            <div class="cert-content">
+                <h3>Adobe Certified Professional – Graphic Design & Illustration (Illustrator)</h3>
+                <p><strong>Adobe</strong> — December 2021</p>
+                <p>Developed expertise in vector-based design, UI elements, and scalable graphics.</p>
+            </div>
+        </div>
+
+    </div>
 
 </main>
+  <hr>
+<!-- Footer -->
+<div id="portfolio-footer"></div>
+
+<!-- Scripts ALWAYS outside main -->
+<script>
+  fetch("../header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-header").innerHTML = data;
+    });
+
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-footer").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

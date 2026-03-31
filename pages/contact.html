@@ -9,42 +9,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--Title shown on the browser tab.-->
     <title>Alanah Little Portfolio | Contact </title>
-    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="/styles/default.css">
 </head>
 
 <!-- Everything the user sees on the page goes inside the body.-->
 
 <body class="homepage">
+<div id="portfolio-header"></div>
 <!-- Header(title) -->
 <main>
-    <h1> <!-- this is the opening tag-->
-        Contact <!-- This whole thing is the element-->
-    </h1> <!--this is the closing tag-->
+<h1>Contact</h1>
+  <hr>
+  <h3>
+    I’m currently seeking front-end development and UX-focused opportunities.
+    If you're hiring or want to collaborate, I’d love to connect!
+  </h3>
+
+  <!-- Contact Cards -->
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>alanahcl15@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/alanah-little" target="_blank">
+        View Profile
+      </a>
+    </div>
+
+    <div class="contact-card">
+      <h3>GitHub</h3>
+      <a href="https://github.com/alittl70" target="_blank">
+        View Projects
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Extra Info -->
+  <h4 style="margin-top: 25px;">
+    Based in Charlotte, NC • Open to remote & relocation
+  </h4>
+
+
 <hr>
-<!-- Main Elements of my HomePage-->
+ <!-- Footer -->
+  <div id="portfolio-footer"></div>
 
+  <!-- Load header/footer -->
+  <script>
+  fetch("../header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-header").innerHTML = data;
+    });
 
-<p>
-I’m currently seeking opportunities in front-end development and UX-focused roles. 
-Feel free to reach out, I’d love to connect.
-</p>
-
-<ul>
-  <li><strong>Email:</strong> <a href="alanahcl15@gmail.com">alanahcl15@gmail.com</a></li>
-  <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alanah-little/" target="_blank">linkedin.com/in/alanah-little</a></li>
-  <li><strong>GitHub:</strong> <a href="https://github.com/alittl70" target="_blank">github.com/alittl70</a></li>
-</ul>
-
-<hr>
-<footer>
-   <p>© 2026 Alanah Little</p>
-
-  <p>
-    <a href="introduction.html">Portfolio</a> |
-    <a href="about.html">About</a> |
-    <a href="resume.html">Resume</a> |
-    <a href= "index.html">Return to Homepage</a>
-  </p>
-</footer>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("portfolio-footer").innerHTML = data;
+    });
+</script>
 </main>
     

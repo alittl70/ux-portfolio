@@ -2,9 +2,7 @@
    default.css – FINAL Portfolio Styles
    ========================= */
 
-/* -------------------------
-   Reset
-------------------------- */
+
 *,
 *::before,
 *::after {
@@ -20,7 +18,7 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color: #1f2937;
 
-  /* ✅ Brown background (clean + modern) */
+  /* Brown background (clean + modern) */
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(139, 94, 52, 0.12), transparent 55%),
     radial-gradient(1000px 500px at 90% 0%, rgba(31, 77, 90, 0.08), transparent 55%),

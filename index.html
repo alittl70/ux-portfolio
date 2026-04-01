@@ -12,15 +12,20 @@
 </head>
 
 <body>
+<!-- Header -->
+<header class="portfolio-header">
+  <div class="container">
+    <h1 class="logo">Alanah Little</h1>
+    <nav class="nav">
+      <a href="/pages/introduction.html">Portfolio</a>
+      <a href="/pages/resume.html">Resume</a>
+      <a href="/pages/contact.html">Contact</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Header -->
-  <!-- After -->
-<div id="header"></div>
-<script>
-  fetch('/header.html')
-    .then(res => res.text())
-    .then(html => document.getElementById('header').innerHTML = html);
-</script>
+
 
   <!-- Main Content -->
   <main>
@@ -46,13 +51,24 @@
         user-centered solutions.
       </p>
 
-      <a href="introduction.html" class="btn">View My Work</a>
+      <a href="/introduction.html" class="btn">View My Work</a>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <div id="footer"></div>
+<footer class="portfolio-footer">
+  <div class="container">
+
+    <p>© 2026 Alanah Little</p>
+
+    <div class="footer-links">
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a>
+      <a href="https://github.com/alittl70" target="_blank">GitHub Profile</a>
+    </div>
+
+  </div>
+</footer>
 
   <!-- Load header + footer -->
   <script>

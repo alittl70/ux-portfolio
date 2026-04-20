@@ -350,3 +350,80 @@ footer#contact {
 }
 .contact-btn:hover { background: var(--ink); color: var(--cream); }
 .contact-copy { font-size: 12px; color: var(--ink-4); }
+
+
+/* ---- MOBILE ---- */
+@media (max-width: 768px) {
+
+  /* Nav */
+  nav { padding: 0 20px; }
+  .nav-links { gap: 16px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 48px;
+    gap: 32px;
+  }
+  .hero-photo { max-height: 320px; }
+
+  /* Skills */
+  .skills-strip { padding: 12px 20px; }
+
+  /* Work header */
+  .work-header { padding: 40px 20px 20px; }
+
+  /* Project grid */
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  /* Featured card */
+  .card-featured {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+  .feat-visual {
+    min-height: 260px;
+    max-height: 300px;
+  }
+  .feat-body { padding: 24px 20px; }
+  .feat-title { font-size: 22px; }
+  .feat-stats { flex-wrap: wrap; gap: 16px; }
+
+  /* Standard cards */
+  .card-thumb { height: 180px; }
+
+  /* Case study */
+  .case-hero {
+    grid-template-columns: 1fr;
+    padding: 0 20px 40px;
+    gap: 32px;
+  }
+  .case-title { font-size: 28px; }
+  .case-stats-row {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px 40px;
+  }
+  .case-section { padding: 0 20px 36px; }
+  .case-close-row { padding: 0 20px 20px; }
+  .case-divider { padding: 0 20px; }
+  .challenge-grid { grid-template-columns: 1fr; }
+  .wireframes-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
+  footer#contact { padding: 60px 20px; }
+  .contact-title { font-size: 28px; }
+  .contact-links { gap: 8px; }
+  .contact-btn { padding: 8px 16px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 32px; }
+  .case-stats-row { grid-template-columns: 1fr; }
+  .wireframes-grid { grid-template-columns: repeat(2, 1fr); }
+  .feat-stats { gap: 12px; }
+}
